@@ -5,6 +5,7 @@ sudo apt-get update
 sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+/bin/zsh
 
 # rbenv
 if [ ! -d "~/.rbenv" ]; then
@@ -16,8 +17,7 @@ if [ ! -d "~/.rbenv/plugins/ruby-build" ]; then
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
 
-source ~/.zshrc
-/bin/zsh
+. ~/.zshrc
 rbenv install 1.9.3-p392
 
 # Install NodeJS 0.10.x from Source
