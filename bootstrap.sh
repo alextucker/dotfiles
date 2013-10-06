@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install base apt packages
+cd ~
 sudo apt-get update
 sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev
 
@@ -15,13 +16,13 @@ if [ ! -d ~/.rbenv ]; then
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+    eval "$(rbenv init -)"
+    export PATH="$HOME/.rbenv/bin:$PATH"
 fi
-exec $SHELL
 
 if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
-exec $SHELL
 
 rbenv install 1.9.3-p392
 rbenv global 1.9.3-p392
