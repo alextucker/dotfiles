@@ -4,7 +4,9 @@
 sudo apt-get update
 sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev
 
-curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+if [ ! -d ~/.oh-my-zsh ]; then
+    curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+fi
 /bin/zsh
 
 # rbenv
