@@ -2,7 +2,7 @@
 
 # Install base apt packages
 sudo apt-get update
-sudo apt-get install -y --ignore-missing build-essential git-core vim tmus zsh python-pip python-dev
+sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev
 
 curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 
