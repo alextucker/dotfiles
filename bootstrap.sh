@@ -15,15 +15,16 @@ if [ ! -d ~/.rbenv ]; then
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.bashrc
     echo 'eval "$(rbenv init -)"' >> ~/.zshrc
-    . ~/.bashrc
 fi
+exec $SHELL
 
 if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
     git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 fi
+exec $SHELL
 
-. ~/.zshrc
 rbenv install 1.9.3-p392
+rbenv global 1.9.3-p392
 
 # Install NodeJS 0.10.x from Source
 wget http://nodejs.org/dist/v0.10.20/node-v0.10.20.tar.gz
