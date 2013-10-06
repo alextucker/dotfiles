@@ -4,14 +4,15 @@
 sudo apt-get update
 sudo apt-get install -y build-essential git-core vim tmus zsh python-pip python-dev
 
-# Install Ruby 1.9.3 from Source
-wget http://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p448.tar.gz
-tar -zxvf ruby-1.9.3-p448.tar.gz
-cd ruby-1.9.3-p448
-./configure
-make
-sudo make install
-cd ..
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
+
+# rbenv
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(rbenv init -)"' >> ~/.zshrc
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+source .zshrc
+rbenv install 1.9.3-p392
 
 # Install NodeJS 0.10.x from Source
 wget http://nodejs.org/dist/v0.10.20/node-v0.10.20.tar.gz
