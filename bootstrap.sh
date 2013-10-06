@@ -7,12 +7,13 @@ sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh p
 if [ ! -d ~/.oh-my-zsh ]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 fi
-/bin/zsh
 
 # rbenv
 if [ ! -d ~/.rbenv ]; then
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
+    echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    . ~/.bashrc
 fi
 
 if [ ! -d ~/.rbenv/plugins/ruby-build ]; then
@@ -39,3 +40,5 @@ sudo pip install grip
 # Install some global node stuff
 sudo npm install -g grunt-cli
 
+# All done. Switch to ZSH
+/bin/zsh
