@@ -13,6 +13,8 @@ if [ ! -d ~/.rbenv ]; then
     git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
     echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.bashrc
+    echo 'eval "$(rbenv init -)"' >> ~/.zshrc
     . ~/.bashrc
 fi
 
