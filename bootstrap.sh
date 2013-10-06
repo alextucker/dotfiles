@@ -9,7 +9,6 @@ curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | 
 # rbenv
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(rbenv init -)"' >> ~/.zshrc
 git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
 source ~/.zshrc
 /bin/zsh
