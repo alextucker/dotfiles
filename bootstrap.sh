@@ -3,7 +3,7 @@
 # Install base apt packages
 cd ~
 sudo apt-get update
-sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev wget getopt
+sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev wget
 
 if [ ! -d ~/.oh-my-zsh ]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
