@@ -3,7 +3,7 @@
 # Install base apt packages
 cd ~
 sudo apt-get update
-sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev wget
+sudo apt-get install -y --ignore-missing build-essential git-core vim tmux zsh python-pip python-dev curl zlib1g-dev libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt-dev wget getopt
 
 if [ ! -d ~/.oh-my-zsh ]; then
     curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
@@ -49,6 +49,20 @@ wget -qO- https://github.com/BNOTIONS/horse.vim/raw/master/install.sh | sudo bas
 
 # Link tmux.conf
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
+
+# scm breeze
+if [ ! -d ~/.scm_breeze ]; then
+    git clone git://github.com/ndbroadbent/scm_breeze.git ~/.scm_breeze
+    ~/.scm_breeze/install.sh
+fi
+
+# git flow
+if [ ! -d ~/.gitflow ]; then
+    git clone https://github.com/nvie/gitflow.git ~/.gitflow
+    cd ~/.gitflow
+    make install
+    export PATH="$HOME/.gitflow:$PATH"
+fi
 
 # Make zsh default shell
 chsh -s /bin/zsh
