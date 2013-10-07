@@ -60,6 +60,7 @@ fi
 if [ ! -d ~/.gitflow ]; then
     git clone https://github.com/nvie/gitflow.git ~/.gitflow
     cd ~/.gitflow
+    git submodule init && git submodule update
     make install
     export PATH="$HOME/.gitflow:$PATH"
 fi
