@@ -39,6 +39,8 @@ cd ..
 # Install some global python stuff
 sudo pip install virtualenv
 sudo pip install virtualenvwrapper
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
+echo 'source /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 sudo pip install grip
 
 # Install some global node stuff
