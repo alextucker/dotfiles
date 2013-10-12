@@ -74,7 +74,7 @@ if [ ! -d ~/.gitflow ]; then
 fi
 
 # Make zsh default shell
-chsh -s /bin/zsh
+chsh -s /usr/bin/zsh
 
 # All done. Switch to ZSH
 /bin/zsh
